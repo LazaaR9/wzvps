@@ -36,9 +36,9 @@ async def speedtest(_, message):
 ┠ <b>IP Address:</b> <code>0.0.0.0</code>
 ┠ <b>Latitude:</b> <code>{result['client']['lat']}</code>
 ┠ <b>Longitude:</b> <code>{result['client']['lon']}</code>
-┠ <b>Country:</b> <code>SriLanka 🇱🇰</code>
-┠ <b>ISP:</b> <code>StartLink</code>
-┖ <b>ISP Rating:</b> <code>9.9</code>
+┠ <b>Country:</b> <code>Wankada</code>
+┠ <b>ISP:</b> <code>Starlink</code>
+┖ <b>ISP Rating:</b> <code>9.9999</code>
 '''
     try:
         pho = await sendMessage(message, string_speed, photo=path)
