@@ -1,4 +1,4 @@
-FROM mysterysd/wzmlx:latest
+FROM rulf347/ultron:latest
 
 WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
