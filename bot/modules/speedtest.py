@@ -28,7 +28,6 @@ async def speedtest(_, message):
 ┠ <b>Upload:</b> <code>{get_readable_file_size(result['upload'] / 8)}/s</code>
 ┠ <b>Download:</b>  <code>{get_readable_file_size(result['download'] / 8)}/s</code>
 ┠ <b>Ping:</b> <code>{result['ping']} ms</code>
-┠ <b>Time:</b> <code>{result['timestamp']}</code>
 ┠ <b>Data Sent:</b> <code>{get_readable_file_size(int(result['bytes_sent']))}</code>
 ┖ <b>Data Received:</b> <code>{get_readable_file_size(int(result['bytes_received']))}</code>
 
@@ -36,7 +35,7 @@ async def speedtest(_, message):
 ┠ <b>IP Address:</b> <code>0.0.0.0</code>
 ┠ <b>Latitude:</b> <code>{result['client']['lat']}</code>
 ┠ <b>Longitude:</b> <code>{result['client']['lon']}</code>
-┠ <b>Country:</b> <code>Wankada</code>
+┠ <b>Country:</b> <code>Wakanda</code>
 ┠ <b>ISP:</b> <code>Starlink</code>
 ┖ <b>ISP Rating:</b> <code>9.9999</code>
 '''
