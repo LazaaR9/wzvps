@@ -670,43 +670,22 @@ def extra_btns(buttons, already=False):
             buttons.ubutton(btn_name, btn_url, 'l_body')
     return buttons, True
 
-
 async def set_commands(client):
     if not config_dict['SET_COMMANDS']:
         return
     try:
         bot_cmds = [
             BotCommand(
-                BotCommands.MirrorCommand[0],
-                f'or /{BotCommands.MirrorCommand[1]} Mirror [links/media/rclone_path]',
-            ),
-            BotCommand(
                 BotCommands.LeechCommand[0],
                 f'or /{BotCommands.LeechCommand[1]} Leech [links/media/rclone_path]',
-            ),
-            BotCommand(
-                BotCommands.QbMirrorCommand[0],
-                f'or /{BotCommands.QbMirrorCommand[1]} Mirror magnet/torrent using qBittorrent',
             ),
             BotCommand(
                 BotCommands.QbLeechCommand[0],
                 f'or /{BotCommands.QbLeechCommand[1]} Leech magnet/torrent using qBittorrent',
             ),
             BotCommand(
-                BotCommands.YtdlCommand[0],
-                f'or /{BotCommands.YtdlCommand[1]} Mirror yt-dlp supported links via bot',
-            ),
-            BotCommand(
                 BotCommands.YtdlLeechCommand[0],
                 f'or /{BotCommands.YtdlLeechCommand[1]} Leech yt-dlp supported links via bot',
-            ),
-            BotCommand(
-                BotCommands.CloneCommand[0],
-                f'or /{BotCommands.CloneCommand[1]} Copy file/folder to Drive (GDrive/RClone)',
-            ),
-            BotCommand(
-                BotCommands.CountCommand,
-                '[drive_url]: Count file/folder of Google Drive/RClone Drives',
             ),
             BotCommand(
                 BotCommands.StatusCommand[0],
@@ -720,47 +699,18 @@ async def set_commands(client):
                 BotCommands.BtSelectCommand,
                 'Select files to download only torrents/magnet qbit/aria2c',
             ),
-            BotCommand(
-                BotCommands.CategorySelect,
-                'Select Upload Category with UserTD or Bot Categories to upload only GDrive upload',
-            ),
             BotCommand(BotCommands.CancelMirror, 'Cancel a Task of yours!'),
-            BotCommand(
-                BotCommands.CancelAllCommand[0],
-                'Cancel all Tasks in whole Bots.',
-            ),
-            BotCommand(BotCommands.ListCommand, 'Search in Drive(s)'),
-            BotCommand(
-                BotCommands.SearchCommand,
-                'Search in Torrent via qBit clients!',
-            ),
             BotCommand(
                 BotCommands.HelpCommand,
                 'Get detailed help about the WZML-X Bot',
             ),
             BotCommand(
+                BotCommands.LogCommand,
+                'Bot Logging Info :(',
+            ),
+            BotCommand(
                 BotCommands.UserSetCommand[0],
                 f"or /{BotCommands.UserSetCommand[1]} User's Personal Settings (Open in PM)",
-            ),
-            BotCommand(
-                BotCommands.IMDBCommand,
-                'Search Movies/Series on IMDB.com and fetch details',
-            ),
-            BotCommand(
-                BotCommands.AniListCommand,
-                'Search Animes on AniList.com and fetch details',
-            ),
-            BotCommand(
-                BotCommands.MyDramaListCommand,
-                'Search Dramas on MyDramaList.com and fetch details',
-            ),
-            BotCommand(
-                BotCommands.SpeedCommand[0],
-                f'or /{BotCommands.SpeedCommand[1]} Check Server Up & Down Speed & Details',
-            ),
-            BotCommand(
-                BotCommands.MediaInfoCommand[0],
-                f'or /{BotCommands.MediaInfoCommand[1]} Generate Mediainfo for Replied Media or DL links',
             ),
             BotCommand(
                 BotCommands.BotSetCommand[0],
