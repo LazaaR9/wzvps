@@ -182,7 +182,7 @@ async def get_decrypt_key(client, message):
         btn = ButtonMaker()
         btn.ubutton("🔑 Unlock Session", f"https://t.me/{bot_name}")
         grp_prompt = await sendMessage(message, "<i>User Session (Pyrogram V2 Session) Access of your Account is needed for Message to Access, it can't be Accessed by Bot and Session</i>", btn.build_menu(1))
-    prompt = await sendCustomMsg(user_id, "<b><u>DECRYPTION:</u></b>\n<i>• This Value is not stored anywhere, so you need to provide it everytime...\n\n</i><b><i>Send your Decrypt Key 🔑 ..</i></b>\n\n<b>Timeout:</b> 60s")
+    prompt = await sendCustomMsg(user_id, "<b><u>DECRYPTION:</u></b>\n<i>• This Value is not stored anywhere, so you need to provide it everytime...\n\n</i><b><i>Send your Decrypt Key 🔑 ..</i></b>\n\n<b>Timeout:</b> 5Min")
     
     bot_cache[msg_id] = [True, '', False]
     async def set_details(_, message):
@@ -193,7 +193,7 @@ async def get_decrypt_key(client, message):
     handler = client.add_handler(MessageHandler(set_details, filters=user(user_id) & text & private), group=-1)
     while bot_cache[msg_id][0]:
         await sleep(0.5)
-        if time() - start_time > 60:
+        if time() - start_time > 300:
             bot_cache[msg_id][0] = False
             await editMessage(prompt, "<b>Decryption Key TimeOut.. Try Again</b>")
             bot_cache[msg_id][2] = True
